@@ -2,10 +2,19 @@ import types
 
 
 def flat_generator(list_of_lists):
+    counter = 0
+    while counter < len(list_of_lists):
+        for item in list_of_lists[counter]:
+            yield item
+        counter += 1
 
-    ...
-    yield
-    ...
+        
+        # yield list_of_lists[counter]
+        # counter += 1
+        
+        # for item in list_of_lists[counter]:
+        #     yield item
+        #     counter += 1
 
 
 def test_2():
